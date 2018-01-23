@@ -1,0 +1,357 @@
+fileFormatVersion: 2
+guid: 2c50d1da3667e184d917bbb3ab8c4614
+timeCreated: 1516612058
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: hoofd
+    21300002: LeftWenk
+    21300004: RightWenk
+    21300006: LeftLeg
+    21300008: RightLeg
+    21300010: LeftFoot
+    21300012: knuppel
+    21300014: RightFoot
+    21300016: LeftArm
+    21300018: nek
+    21300020: RightArm
+    21300022: Shoe
+    21300024: LeftHand
+    21300026: lichaam
+    21300028: RightFist
+    21300030: RightHand
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hoofd
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 256
+        width: 268
+        height: 236
+      alignment: 9
+      pivot: {x: 0.41233608, y: 0.0058023487}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LeftWenk
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 487
+        width: 46
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RightWenk
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 487
+        width: 38
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LeftLeg
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 356
+        width: 109
+        height: 108
+      alignment: 9
+      pivot: {x: 0.5307914, y: 0.9739185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RightLeg
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 348
+        width: 69
+        height: 116
+      alignment: 9
+      pivot: {x: 0.45135808, y: 0.9557011}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LeftFoot
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 268
+        width: 46
+        height: 64
+      alignment: 9
+      pivot: {x: 0.718888, y: 0.90642405}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: knuppel
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 8
+        width: 36
+        height: 324
+      alignment: 9
+      pivot: {x: 0.3834627, y: 0.020901844}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RightFoot
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 260
+        width: 32
+        height: 67
+      alignment: 9
+      pivot: {x: 0.5262203, y: 0.96336615}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LeftArm
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 144
+        width: 64
+        height: 65
+      alignment: 9
+      pivot: {x: 0.98508704, y: 0.745266}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nek
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 196
+        width: 42
+        height: 36
+      alignment: 9
+      pivot: {x: 0.6798005, y: 0.8729184}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RightArm
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 148
+        width: 48
+        height: 76
+      alignment: 9
+      pivot: {x: 0.115426384, y: 0.7539287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Shoe
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 199
+        width: 88
+        height: 38
+      alignment: 9
+      pivot: {x: 0.25209323, y: 0.78704995}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LeftHand
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 19
+        width: 32
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5524416, y: 0.92471397}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lichaam
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 47
+        width: 120
+        height: 129
+      alignment: 9
+      pivot: {x: 0.6398448, y: 0.8772557}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RightFist
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 40
+        height: 33
+      alignment: 9
+      pivot: {x: 0.39511642, y: 0.3474417}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RightHand
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 16
+        width: 77
+        height: 44
+      alignment: 9
+      pivot: {x: 0.009635231, y: 0.30930203}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
