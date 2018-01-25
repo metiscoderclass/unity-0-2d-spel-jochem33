@@ -5,15 +5,15 @@ using UnityEngine;
 public class player : MonoBehaviour {
 	public float moveSpeed = 10.0f;
 	bool facingRight = true;
-	float move = Input.GetAxis("Horizontal");
 
 	Animator anim;
 	Rigidbody2D rigid;
-
+	float move;
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
 		rigid = GetComponent<Rigidbody2D> ();
+		move = Input.GetAxis("Horizontal");
 	}
 	
 	// Update is called once per frame
@@ -22,7 +22,7 @@ public class player : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-		anim.SetFloat ("Speed", Mathf.Abs (move));
+		anim.SetFloat ("speed", Mathf.Abs (move));
 		rigid.velocity = new Vector2 (move * moveSpeed, rigid.velocity.y);
 		if (move > 0 && !facingRight) {
 			FlipFacing ();
