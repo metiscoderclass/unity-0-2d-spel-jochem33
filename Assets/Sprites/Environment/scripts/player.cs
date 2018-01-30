@@ -13,7 +13,6 @@ public class player : MonoBehaviour {
 	void Start () {
 		anim = GetComponent<Animator> ();
 		rigid = GetComponent<Rigidbody2D> ();
-		move = Input.GetAxis("Horizontal");
 	}
 	
 	// Update is called once per frame
@@ -22,6 +21,7 @@ public class player : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
+		move = Input.GetAxis("Horizontal");
 		anim.SetFloat ("speed", Mathf.Abs (move));
 		rigid.velocity = new Vector2 (move * moveSpeed, rigid.velocity.y);
 		if (move > 0 && !facingRight) {
