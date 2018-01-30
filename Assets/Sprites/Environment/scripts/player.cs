@@ -8,6 +8,9 @@ public class player : MonoBehaviour {
 
 	public float jumpSpeed = 300.0f;
 
+	public float smoothTimeY = 0.1f;
+	public float smoothTimeX = 0.1f; 
+
 
 	Animator anim;
 	Rigidbody2D rigid;
@@ -16,11 +19,15 @@ public class player : MonoBehaviour {
 	void Start () {
 		anim = GetComponent<Animator> ();
 		rigid = GetComponent<Rigidbody2D> ();
+		GameObject Camera;
+		Camera = GameObject.FindGameObjectsWithTag ("MainCamera");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		float posX = Mathf.SmoothDamp (Camera.transform.position.x, transform.position.x, ref cameraVelocity.x, smoothTimeX);
+		float posY = Mathf.SmoothDamp (Camera.transform.position.y, transform.position.y, ref cameraVelocity.y, smoothTimeY);
+		Camera.transform.position = new Vector3(posX, posY, Camera.transform.position.z);
 	}
 
 	void FixedUpdate () {
@@ -34,7 +41,7 @@ public class player : MonoBehaviour {
 			FlipFacing ();
 		}
 
-		if (Input.GetButtonDown ("Jump")) {
+		if (Input.GetButtonDown ("Jump") && rigid.velocity.y == 0) {
 			rigid.AddForce (Vector2.up * jumpSpeed);
 		}
 	}
