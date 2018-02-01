@@ -11,6 +11,10 @@ public class player : MonoBehaviour {
 	public float smoothTimeY = 0.1f;
 	public float smoothTimeX = 0.1f; 
 
+	bool attacking;
+	float attackTime;
+	public float attackCD = 0.3f;
+	public Collider2D batTrigger;
 
 	Animator anim;
 	Rigidbody2D rigid;
@@ -19,15 +23,37 @@ public class player : MonoBehaviour {
 	void Start () {
 		anim = GetComponent<Animator> ();
 		rigid = GetComponent<Rigidbody2D> ();
-		GameObject Camera;
-		Camera = GameObject.FindGameObjectsWithTag ("MainCamera");
+		batTrigger.enabled = false;
+		//GameObject Camera;
+		//Camera = GameObject.FindGameObjectWithTag ("MainCamera");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		float posX = Mathf.SmoothDamp (Camera.transform.position.x, transform.position.x, ref cameraVelocity.x, smoothTimeX);
-		float posY = Mathf.SmoothDamp (Camera.transform.position.y, transform.position.y, ref cameraVelocity.y, smoothTimeY);
-		Camera.transform.position = new Vector3(posX, posY, Camera.transform.position.z);
+		if (Input.GetKeyDown("f") && !attacking)
+		{
+			attacking = true;
+			attackTime = attackCD;
+			anim.SetTrigger("Attacking");
+		}
+
+		if (attacking)
+		{
+			if (attackTime > 0)
+			{
+				attackTime -= Time.deltaTime;
+				batTrigger.enabled = true;
+			}
+			else
+			{
+				batTrigger.enabled = false;
+				attacking = false;
+			}
+		}
+		//Camera.transform.z = transform.z;
+		//float posX = Mathf.SmoothDamp (Camera.transform.position.x, transform.position.x, ref cameraVelocity.x, smoothTimeX);
+		//float posY = Mathf.SmoothDamp (Camera.transform.position.y, transform.position.y, ref cameraVelocity.y, smoothTimeY);
+		//Camera.transform.position = new Vector3(posX, posY, Camera.transform.position.z);
 	}
 
 	void FixedUpdate () {
