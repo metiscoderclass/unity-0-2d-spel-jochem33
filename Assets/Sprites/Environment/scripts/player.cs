@@ -15,7 +15,7 @@ public class player : MonoBehaviour {
 
 	Vector2 spawnPoint;
 
-	public int playerLives = 5;
+	public int playerLives = 3;
 	public int coinPickups = 0;
 	public Text lives;
 	public Text coincounter;
@@ -118,7 +118,7 @@ public class player : MonoBehaviour {
 			}
 			else
 			{
-				lives.text = "5";
+				lives.text = "3";
 				coincounter.text = "0";
 				transform.position = spawnPoint;}
 		}
