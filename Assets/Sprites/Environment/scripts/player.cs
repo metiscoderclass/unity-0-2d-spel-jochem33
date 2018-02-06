@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class player : MonoBehaviour {
 	public float moveSpeed = 10.0f;
@@ -10,6 +11,11 @@ public class player : MonoBehaviour {
 
 	public float smoothTimeY = 0.1f;
 	public float smoothTimeX = 0.1f; 
+
+	public int playerLives = 3;
+	public int coinPickups = 0;
+	public Text lives;
+	public Text coincounter;
 
 	bool attacking;
 	float attackTime;
