@@ -59,14 +59,6 @@ public class player : MonoBehaviour {
 	}
 		
 
-	void OnTriggerEnter2D(Collider2D col)
-	{
-		if (col.isTrigger != true && col.CompareTag("Box"))
-		{
-			DestroyObject(col.gameObject);
-		}
-	}
-
 	void FixedUpdate () {
 		move = Input.GetAxis("Horizontal");
 		anim.SetFloat ("speed", Mathf.Abs (move));
