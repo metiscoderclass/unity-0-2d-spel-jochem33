@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class player : MonoBehaviour {
 	public float moveSpeed = 10.0f;
@@ -12,7 +13,9 @@ public class player : MonoBehaviour {
 	public float smoothTimeY = 0.1f;
 	public float smoothTimeX = 0.1f; 
 
-	public int playerLives = 3;
+	Vector2 spawnPoint;
+
+	public int playerLives = 5;
 	public int coinPickups = 0;
 	public Text lives;
 	public Text coincounter;
@@ -26,7 +29,10 @@ public class player : MonoBehaviour {
 	Rigidbody2D rigid;
 	float move;
 	// Use this for initialization
+
 	void Start () {
+		spawnPoint = transform.position;
+		UpdateCounter();
 		anim = GetComponent<Animator> ();
 		rigid = GetComponent<Rigidbody2D> ();
 		batTrigger.enabled = false;
@@ -63,6 +69,12 @@ public class player : MonoBehaviour {
 		//float posY = Mathf.SmoothDamp (Camera.transform.position.y, transform.position.y, ref cameraVelocity.y, smoothTimeY);
 		//Camera.transform.position = new Vector3(posX, posY, Camera.transform.position.z);
 	}
+
+	void UpdateCounter()
+	{
+		lives.text = playerLives.ToString();
+		coincounter.text = coinPickups.ToString();
+	}
 		
 
 	void FixedUpdate () {
@@ -87,4 +99,30 @@ public class player : MonoBehaviour {
 		charScale.x = charScale.x * -1;
 		transform.localScale = charScale;
 	}
+
+
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		if (col.gameObject.tag == "coin")
+		{
+			DestroyObject(col.gameObject);
+			coinPickups = coinPickups + 1;
+			UpdateCounter();
+		}
+		if (col.gameObject.tag == "nogozone")
+		{
+			if(playerLives > 0)
+			{
+				playerLives = playerLives - 1;
+				transform.position = spawnPoint;
+			}
+			else
+			{
+				lives.text = "5";
+				coincounter.text = "0";
+				transform.position = spawnPoint;}
+		}
+		UpdateCounter();
+	}
 }
+

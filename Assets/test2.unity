@@ -282,7 +282,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: '5
+
+'
 --- !u!222 &25384207
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -883,7 +885,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -253, y: 148.29218}
+  m_AnchoredPosition: {x: -486.34412, y: 367}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &367130680
@@ -1293,8 +1295,8 @@ MonoBehaviour:
   smoothTimeX: 0.1
   playerLives: 3
   coinPickups: 0
-  lives: {fileID: 0}
-  coincounter: {fileID: 0}
+  lives: {fileID: 25384206}
+  coincounter: {fileID: 439815233}
   attackCD: 0.3
   batTrigger: {fileID: 2147461652}
 --- !u!4 &515173336 stripped
@@ -3428,7 +3430,7 @@ GameObject:
   - component: {fileID: 2010785140}
   - component: {fileID: 2010785141}
   m_Layer: 5
-  m_Name: otto
+  m_Name: hart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3441,7 +3443,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2010785139}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -251, y: 107, z: -370.66367}
+  m_LocalPosition: {x: -484, y: 322, z: -370.66367}
   m_LocalScale: {x: 2.1599996, y: 2.1599996, z: 72}
   m_Children: []
   m_Father: {fileID: 726955671}
@@ -3481,7 +3483,7 @@ SpriteRenderer:
   m_SortingLayerID: -271610261
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 18b8eec4e811745bcac8e1e80497f96d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 13bc2c478f72a49a994529d0d8e95d21, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
