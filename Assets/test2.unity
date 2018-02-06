@@ -1293,7 +1293,7 @@ MonoBehaviour:
   jumpSpeed: 300
   smoothTimeY: 0.1
   smoothTimeX: 0.1
-  playerLives: 3
+  playerLives: 5
   coinPickups: 0
   lives: {fileID: 25384206}
   coincounter: {fileID: 439815233}
@@ -2727,7 +2727,7 @@ GameObject:
   - component: {fileID: 1364342689}
   m_Layer: 0
   m_Name: nogozone
-  m_TagString: Untagged
+  m_TagString: deathzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

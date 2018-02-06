@@ -15,7 +15,7 @@ public class player : MonoBehaviour {
 
 	Vector2 spawnPoint;
 
-	public int playerLives = 3;
+	public int playerLives = 5;
 	public int coinPickups = 0;
 	public Text lives;
 	public Text coincounter;
@@ -109,7 +109,7 @@ public class player : MonoBehaviour {
 			coinPickups = coinPickups + 1;
 			UpdateCounter();
 		}
-		if (col.gameObject.tag == "nogozone")
+		if (col.gameObject.tag == "deathzone")
 		{
 			if(playerLives > 0)
 			{
@@ -118,9 +118,10 @@ public class player : MonoBehaviour {
 			}
 			else
 			{
-				lives.text = "3";
+				lives.text = "5";
 				coincounter.text = "0";
-				transform.position = spawnPoint;}
+				transform.position = spawnPoint;
+			}
 		}
 		UpdateCounter();
 	}
