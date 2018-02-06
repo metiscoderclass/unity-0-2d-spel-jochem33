@@ -34,7 +34,7 @@ public class player : MonoBehaviour {
 		{
 			attacking = true;
 			attackTime = attackCD;
-			anim.SetTrigger("Attacking");
+			anim.SetTrigger("attack");
 		}
 
 		if (attacking)
@@ -50,12 +50,14 @@ public class player : MonoBehaviour {
 				attacking = false;
 			}
 		}
+			
 
 		//Camera.transform.z = transform.z;
 		//float posX = Mathf.SmoothDamp (Camera.transform.position.x, transform.position.x, ref cameraVelocity.x, smoothTimeX);
 		//float posY = Mathf.SmoothDamp (Camera.transform.position.y, transform.position.y, ref cameraVelocity.y, smoothTimeY);
 		//Camera.transform.position = new Vector3(posX, posY, Camera.transform.position.z);
 	}
+		
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
