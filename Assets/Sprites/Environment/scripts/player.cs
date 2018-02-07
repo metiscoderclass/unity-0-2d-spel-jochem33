@@ -62,6 +62,8 @@ public class player : MonoBehaviour {
 				attacking = false;
 			}
 		}
+
+		//Camera.transform.x = Player.transform.x;
 			
 
 		//Camera.transform.z = transform.z;
@@ -118,6 +120,7 @@ public class player : MonoBehaviour {
 			}
 			else
 			{
+				Debug.Log (spawnPoint);
 				lives.text = "5";
 				coincounter.text = "0";
 				transform.position = spawnPoint;
