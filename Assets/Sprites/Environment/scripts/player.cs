@@ -13,7 +13,7 @@ public class player : MonoBehaviour {
 	public float smoothTimeY = 0.1f;
 	public float smoothTimeX = 0.1f; 
 
-	Vector2 spawnPoint;
+	Vector3 spawnPoint;
 
 	public int playerLives = 5;
 	public int coinPickups = 0;
@@ -120,10 +120,11 @@ public class player : MonoBehaviour {
 			}
 			else
 			{
-				Debug.Log (spawnPoint);
+				Debug.Log ("dood");
 				lives.text = "5";
 				coincounter.text = "0";
 				transform.position = spawnPoint;
+				SceneManager.LoadScene ("test2");
 			}
 		}
 		UpdateCounter();
