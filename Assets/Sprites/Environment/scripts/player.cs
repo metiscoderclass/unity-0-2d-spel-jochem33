@@ -11,11 +11,12 @@ public class player : MonoBehaviour {
 	public float jumpSpeed = 300.0f;
 
 	public float smoothTimeY = 0.1f;
-	public float smoothTimeX = 0.1f; 
+	public float smoothTimeX = 0.1f;
+
 
 	Vector3 spawnPoint;
 
-	public int playerLives = 5;
+	public int playerLives = 3;
 	public int coinPickups = 0;
 	public Text lives;
 	public Text coincounter;
@@ -24,6 +25,10 @@ public class player : MonoBehaviour {
 	float attackTime;
 	public float attackCD = 0.3f;
 	public Collider2D batTrigger;
+
+	public GameObject coin;
+
+	public GameObject Camera;
 
 	Animator anim;
 	Rigidbody2D rigid;
@@ -36,7 +41,7 @@ public class player : MonoBehaviour {
 		anim = GetComponent<Animator> ();
 		rigid = GetComponent<Rigidbody2D> ();
 		batTrigger.enabled = false;
-		//GameObject Camera;
+
 		//Camera = GameObject.FindGameObjectWithTag ("MainCamera");
 	}
 	
@@ -63,13 +68,19 @@ public class player : MonoBehaviour {
 			}
 		}
 
-		//Camera.transform.x = Player.transform.x;
-			
+		if (Input.GetKeyDown ("q")) {
+			//Instantiate (coin, new Vector3(2.0F, 0, 0));
+			//Debug.log (transform.position);
 
-		//Camera.transform.z = transform.z;
-		//float posX = Mathf.SmoothDamp (Camera.transform.position.x, transform.position.x, ref cameraVelocity.x, smoothTimeX);
-		//float posY = Mathf.SmoothDamp (Camera.transform.position.y, transform.position.y, ref cameraVelocity.y, smoothTimeY);
-		//Camera.transform.position = new Vector3(posX, posY, Camera.transform.position.z);
+		}
+
+		Vector2 cameraVelocity = new Vector2();
+		float posX = Mathf.SmoothDamp(Camera.transform.position.x, transform.position.x, ref cameraVelocity.x, smoothTimeX);
+		float posY = Mathf.SmoothDamp(Camera.transform.position.y, transform.position.y, ref cameraVelocity.y, smoothTimeY);
+		if (transform.position.y > 0) {
+			Camera.transform.position = new Vector3 (posX, posY, Camera.transform.position.z);
+			Camera.transform.position = new Vector3 (posX, posY, Camera.transform.position.z);
+		}
 	}
 
 	void UpdateCounter()
@@ -121,7 +132,7 @@ public class player : MonoBehaviour {
 			else
 			{
 				Debug.Log ("dood");
-				lives.text = "5";
+				lives.text = "3";
 				coincounter.text = "0";
 				transform.position = spawnPoint;
 				SceneManager.LoadScene ("test2");

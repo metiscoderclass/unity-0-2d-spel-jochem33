@@ -1,4 +1,4 @@
-WindowsStandalone
+iOS
 SceneListBegin?
 Assets/test2.unity
 SceneListEnd?
